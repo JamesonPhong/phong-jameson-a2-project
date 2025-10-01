@@ -68,14 +68,10 @@ namespace MohawkGame2D
         {
             Window.SetTitle("Equilibrium");
             Window.SetSize(400, 400);
-            Window.ClearBackground(palette[3]);
-        }
 
-        /// <summary>
-        ///     Update runs every frame.
-        /// </summary>
-        public void Update()
-        {
+            // Set background colour
+            Window.ClearBackground(palette[3]);
+
             // Draw Character's Head
             Draw.LineSize = 0;
             Draw.FillColor = palette[4];
@@ -133,6 +129,139 @@ namespace MohawkGame2D
             drawFrameDecoration(0, 0, 60, 40, 6);
             drawFrameDecoration(400, 0, 60, 40, 6);
             drawFrameDecoration(60, 40, 400, 0, 6);
+        }
+
+        /// <summary>
+        ///     Update runs every frame.
+        /// </summary>
+        public void Update()
+        {
+            if (Input.IsMouseButtonPressed(MouseInput.Left))
+            {
+                // Set background colour
+                Window.ClearBackground(palette[3]);
+
+                // Draw Character's Head
+                Draw.LineSize = 0;
+                Draw.FillColor = palette[4];
+                Draw.Circle(num[7], num[8], num[9]);
+
+                // Draw Character's Eye
+                Draw.LineSize = 0;
+                Draw.FillColor = palette[5];
+                Draw.Circle(num[4], num[5], num[6]);
+
+                // Draw Character's Body
+                Draw.LineSize = 0;
+                Draw.FillColor = palette[4];
+                Draw.Ellipse(num[7], num[3], num[10], num[8]);
+
+                /* Draw Frame Corner Reference
+
+                    Draw.LineSize = 3;
+                    Draw.LineColor = palette[2];
+                    Draw.FillColor = palette[0];
+                    Draw.Square(num[0], num[0], num[1]);
+
+                   Draw Frame Body Reference
+
+                    Draw.LineSize = 3;
+                    Draw.LineColor = palette[2];
+                    Draw.FillColor = palette[1];
+                    Draw.Rectangle(num[1], num[0], num[2], num[1]);
+
+                   Draw Frame Decoration Reference
+
+                    Draw.LineSize = 3;
+                    Draw.LineColor = palette[2];
+                    Draw.FillColor = palette[0];
+                    for (int i = 0; i < 8; i++)
+                    {
+                        Draw.Circle(60 + (40 * i), 0 + (0 * i), num[6]);
+                    }
+                */
+
+                // Activate Draw Frame Corner Function
+                drawFrameCorner(0, 0, 1);
+                drawFrameCorner(3, 0, 1);
+                drawFrameCorner(0, 3, 1);
+                drawFrameCorner(3, 3, 1);
+
+                // Activate Draw Frame Body Function
+                drawFrameBody(1, 0, 2, 1);
+                drawFrameBody(0, 1, 1, 2);
+                drawFrameBody(3, 1, 1, 2);
+                drawFrameBody(1, 3, 2, 1);
+
+                // Activate Draw Frame Decoration Function
+                drawFrameDecoration(60, 40, 0, 0, 6);
+                drawFrameDecoration(0, 0, 60, 40, 6);
+                drawFrameDecoration(400, 0, 60, 40, 6);
+                drawFrameDecoration(60, 40, 400, 0, 6);
+            }
+            else if (Input.IsMouseButtonPressed(MouseInput.Right))
+            {
+                // Set background colour
+                Window.ClearBackground(palette[4]);
+
+                // Draw Character's Head
+                Draw.LineSize = 0;
+                Draw.FillColor = palette[3];
+                Draw.Circle(num[7], num[8], num[9]);
+
+                // Draw Character's Eye
+                Draw.LineSize = 0;
+                Draw.FillColor = palette[6];
+                Draw.Circle(num[4], num[5], num[6]);
+
+                // Draw Character's Body
+                Draw.LineSize = 0;
+                Draw.FillColor = palette[3];
+                Draw.Ellipse(num[7], num[3], num[10], num[8]);
+
+                /* Draw Frame Corner Reference
+                
+                Draw.LineSize = 3;
+                Draw.LineColor = palette[2];
+                Draw.FillColor = palette[0];
+                Draw.Square(num[0], num[0], num[1]);
+
+               Draw Frame Body Reference
+                
+                Draw.LineSize = 3;
+                Draw.LineColor = palette[2];
+                Draw.FillColor = palette[1];
+                Draw.Rectangle(num[1], num[0], num[2], num[1]);
+
+               Draw Frame Decoration Reference
+
+                Draw.LineSize = 3;
+                Draw.LineColor = palette[2];
+                Draw.FillColor = palette[0];
+                for (int i = 0; i < 8; i++)
+                {
+                    Draw.Circle(60 + (40 * i), 0 + (0 * i), num[6]);
+                }
+            */
+
+                // Activate Draw Frame Corner Function
+                drawFrameCorner(0, 0, 1);
+                drawFrameCorner(3, 0, 1);
+                drawFrameCorner(0, 3, 1);
+                drawFrameCorner(3, 3, 1);
+
+                // Activate Draw Frame Body Function
+                drawFrameBody(1, 0, 2, 1);
+                drawFrameBody(0, 1, 1, 2);
+                drawFrameBody(3, 1, 1, 2);
+                drawFrameBody(1, 3, 2, 1);
+
+                // Activate Draw Frame Decoration Function
+                drawFrameDecoration(60, 40, 0, 0, 6);
+                drawFrameDecoration(0, 0, 60, 40, 6);
+                drawFrameDecoration(400, 0, 60, 40, 6);
+                drawFrameDecoration(60, 40, 400, 0, 6);
+            }
         }
         // Function: Draw Frame Corner
         void drawFrameCorner(int x, int y, int size)
