@@ -76,7 +76,41 @@ namespace MohawkGame2D
         /// </summary>
         public void Update()
         {
+            // Draw Character's Head
+            Draw.LineSize = 0;
+            Draw.FillColor = palette[4];
+            Draw.Circle(num[7], num[8], num[9]);
 
+            // Draw Character's Eye
+            Draw.LineSize = 0;
+            Draw.FillColor = palette[5];
+            Draw.Circle(num[4], num[5], num[6]);
+
+            // Draw Character's Body
+            Draw.LineSize = 0;
+            Draw.FillColor = palette[4];
+            Draw.Ellipse(num[7], num[3], num[10], num[8]);
+
+            // Draw Frame Corner
+            Draw.LineSize = 3;
+            Draw.LineColor = palette[2];
+            Draw.FillColor = palette[0];
+            Draw.Square(num[0], num[0], num[1]);
+
+            // Draw Frame Body
+            Draw.LineSize = 3;
+            Draw.LineColor = palette[2];
+            Draw.FillColor = palette[1];
+            Draw.Rectangle(num[1], num[0], num[2], num[1]);
+
+            // Draw Frame Decoration
+            Draw.LineSize = 3;
+            Draw.LineColor = palette[2];
+            Draw.FillColor = palette[0];
+            for (int i = 0; i < 8; i++)
+            {
+                Draw.Circle(60 + (40 * i), 0 + (0 * i), num[6]);
+            }
         }
     }
 
