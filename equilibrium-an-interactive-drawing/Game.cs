@@ -136,7 +136,8 @@ namespace MohawkGame2D
         /// </summary>
         public void Update()
         {
-            if (Input.IsMouseButtonPressed(MouseInput.Left))
+            if (Input.IsMouseButtonPressed(MouseInput.Left) ||
+                Input.IsKeyboardKeyPressed(KeyboardInput.A))
             {
                 // Set background colour
                 Window.ClearBackground(palette[3]);
@@ -174,7 +175,8 @@ namespace MohawkGame2D
                 drawFrameDecoration(400, 0, 60, 40, 6);
                 drawFrameDecoration(60, 40, 400, 0, 6);
             }
-            else if (Input.IsMouseButtonPressed(MouseInput.Right))
+            else if (Input.IsMouseButtonPressed(MouseInput.Right) ||
+                     Input.IsKeyboardKeyPressed(KeyboardInput.D))
             {
                 // Set background colour
                 Window.ClearBackground(palette[4]);
