@@ -66,7 +66,9 @@ namespace MohawkGame2D
         /// </summary>
         public void Setup()
         {
-
+            Window.SetTitle("Equilibrium");
+            Window.SetSize(400, 400);
+            Window.ClearBackground(palette[3]);
         }
 
         /// <summary>
