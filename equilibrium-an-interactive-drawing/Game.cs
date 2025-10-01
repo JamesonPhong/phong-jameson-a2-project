@@ -156,31 +156,6 @@ namespace MohawkGame2D
                 Draw.FillColor = palette[4];
                 Draw.Ellipse(num[7], num[3], num[10], num[8]);
 
-                /* Draw Frame Corner Reference
-
-                    Draw.LineSize = 3;
-                    Draw.LineColor = palette[2];
-                    Draw.FillColor = palette[0];
-                    Draw.Square(num[0], num[0], num[1]);
-
-                   Draw Frame Body Reference
-
-                    Draw.LineSize = 3;
-                    Draw.LineColor = palette[2];
-                    Draw.FillColor = palette[1];
-                    Draw.Rectangle(num[1], num[0], num[2], num[1]);
-
-                   Draw Frame Decoration Reference
-
-                    Draw.LineSize = 3;
-                    Draw.LineColor = palette[2];
-                    Draw.FillColor = palette[0];
-                    for (int i = 0; i < 8; i++)
-                    {
-                        Draw.Circle(60 + (40 * i), 0 + (0 * i), num[6]);
-                    }
-                */
-
                 // Activate Draw Frame Corner Function
                 drawFrameCorner(0, 0, 1);
                 drawFrameCorner(3, 0, 1);
@@ -218,31 +193,6 @@ namespace MohawkGame2D
                 Draw.LineSize = 0;
                 Draw.FillColor = palette[3];
                 Draw.Ellipse(num[7], num[3], num[10], num[8]);
-
-                /* Draw Frame Corner Reference
-                
-                Draw.LineSize = 3;
-                Draw.LineColor = palette[2];
-                Draw.FillColor = palette[0];
-                Draw.Square(num[0], num[0], num[1]);
-
-               Draw Frame Body Reference
-                
-                Draw.LineSize = 3;
-                Draw.LineColor = palette[2];
-                Draw.FillColor = palette[1];
-                Draw.Rectangle(num[1], num[0], num[2], num[1]);
-
-               Draw Frame Decoration Reference
-
-                Draw.LineSize = 3;
-                Draw.LineColor = palette[2];
-                Draw.FillColor = palette[0];
-                for (int i = 0; i < 8; i++)
-                {
-                    Draw.Circle(60 + (40 * i), 0 + (0 * i), num[6]);
-                }
-            */
 
                 // Activate Draw Frame Corner Function
                 drawFrameCorner(0, 0, 1);
