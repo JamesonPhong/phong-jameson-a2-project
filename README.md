@@ -1,2 +1,2 @@
-# phong-jameson-a2-project
-This is an interactive program project for Game Development Foundations, a Game Design class at Mohawk College of Applied Arts and Technology.
+Equilibrium is an Interactive Drawing, where the user can switch between the "Light" side or "Dark" side of the Character inside of the Picture Frame.
+Simply press Left Mouse Click or A on the Keyboard to switch to the Light Side, or press Right Mouse Click or D on the Keyboard to switch to the Dark Side.
